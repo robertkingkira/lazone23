@@ -1,0 +1,131 @@
+.contact-section {
+    min-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: $black-pearl;
+}
+
+.contact-wrapper {
+    width: 90%;
+    display: flex;
+}
+
+.container-contact {
+    flex: 1 1 40rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.text-contact {
+    color: $color-white;
+    font-size: 5rem;
+    letter-spacing: .1rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.description-contact {
+    color: $color-gray5;
+    font-size: 3rem;
+    padding: 3rem 0;
+}
+
+.contact-container-right {
+    flex: 1 1 40rem;
+}
+
+.contact-wrapper-right {
+    background: rgba($color-blue-dark2, .6);
+    width: 60%;
+    color: $color-white;
+    border-radius: 2rem;
+    margin: auto;
+    box-shadow: 0 .3rem .5rem $color-black;
+}
+
+.form-heading {
+    color: $color-white;
+    font-size: 3.5rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+.name-form-wrapper,
+.email-form-wrapper {
+    width: 90%;
+    margin: 1.5rem auto;
+    position: relative;
+}
+
+.text-form-wrapper {
+    width: 90%;
+    margin: 4rem auto;
+    position: relative;
+}
+
+.input-name,
+.input-email,
+.input-text {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: .1rem solid $color-blue-dark2;
+    color: $color-gray5;
+    font-size: $default-font-size;
+    transition: border-color .3s;
+    outline: none;
+
+    &::placeholder {
+        color: $color-gray2;
+    }
+
+    &:focus {
+        // border-bottom-color: $color-aqua;
+        outline: none;
+    }
+}
+
+.input-text {
+    resize: none;
+}
+
+.focus-border-name,
+.focus-border-email,
+.focus-border-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: .2rem;
+    background-color: $color-gold;
+    transition: .4s;
+}
+
+.input-name:focus~.focus-border-name,
+.input-email:focus~.focus-border-email,
+.input-text:focus~.focus-border-text {
+    width: 100%;
+    transition: .4s;
+}
+
+
+.form-button {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    color: $color-white;
+    background: darken($color-blue, 10%);
+    padding: 2rem;
+    margin-top: 8rem;
+    border: none;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: .5s ease-in-out;
+
+    &:hover {
+        background: darken($color-blue, 20%);
+    }
+}

@@ -1,0 +1,77 @@
+.footer-main {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    min-height: 10vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: radial-gradient($color-black2, $color-black);
+
+}
+
+.logo-footer-wrapper {
+    flex: 1 1 40rem;
+
+    .logo-footer {
+        width: 22%;
+    }
+}
+
+.year-footer {
+    flex: 1 1 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-p-copyright {
+        list-style: none;
+        font-size: 1.4rem;
+        color: $color-white;
+    }
+
+    .footer-year-link {
+        color: $color-white;
+        font-size: 1.4rem;
+
+        &:hover {
+            color: darken($color-white, 20%);
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+.footer-nav-container {
+    flex: 1 1 40rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+
+    .footer-list {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 8rem;
+    }
+
+    .footer-link {
+        color: $color-white;
+        font-size: 1.4rem;
+        margin: auto;
+
+        &:hover {
+            color: darken($color-white, 20%);
+            text-decoration: none;
+        }
+    }
+}

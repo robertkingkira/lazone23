@@ -1,0 +1,28 @@
+.alert-container {
+    display: inline-block;
+}
+
+.cart-alert-title {
+    padding: 1rem 0;
+    color: $color-gray6;
+}
+
+.alert {
+    padding: 1.2rem 2.2rem !important;
+    margin-bottom: 2rem !important;
+    border: .1rem solid transparent !important;
+    border-radius: 4rem !important;
+    font-size: 2rem !important;
+}
+
+.alert-success {
+    color: $color-green !important;
+    background-color: $color-green2 !important;
+    border-color: $color-green3 !important;
+}
+
+.alert-danger {
+    color: $color-red !important;
+    background-color: $color-red2 !important;
+    border-color: $color-red3 !important;
+}

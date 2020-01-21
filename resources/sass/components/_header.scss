@@ -1,0 +1,125 @@
+#main-header {
+    background: radial-gradient($color-black2, $color-black);
+    color: $color-white;
+}
+
+.main-navbar {
+
+    display: flex;
+    width: 90%;
+    margin: auto;
+    // padding: 2rem;
+    min-height: 10vh;
+    align-items: center;
+}
+
+.nav-ul {
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.logo-wrapper {
+    flex: 1 1 40rem;
+}
+
+.logo-link {
+    display: flex;
+    width: 18rem;
+}
+
+.logoImg {
+    width: 100%;
+}
+
+.nav-link {
+    font-family: $poppins;
+    color: $color-white;
+    font-size: 1.8rem;
+
+    &:hover {
+        color: $color-gold;
+        text-decoration: none;
+    }
+}
+
+.nav-link:hover .cart-count {
+    color: $color-white;
+}
+
+.nav-link:hover .cart-count span {
+    background: $color-gold;
+    color: $color-white;
+}
+
+.nav-cart-link {
+    display: flex !important;
+
+    .cart-icon {
+        font-size: 2rem;
+        margin: 0 .6rem;
+    }
+
+    .cart-count {
+        span {
+            background: $color-yellow;
+            color: $color-gray7;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+    }
+}
+
+.sign-out-icon {
+    font-size: 1.8rem;
+}
+
+.line-header {
+    color: $color-white;
+    position: relative;
+    top: -.8rem;
+    margin: 0;
+    border: .1rem solid $color-white;
+}
+
+.nav-search {
+    display: flex;
+    position: relative;
+}
+
+.search-bar {
+    color: $color-gray4;
+    width: 16rem;
+    font-size: $default-font-size;
+    background: transparent;
+    border: none;
+    transition: color .3s;
+
+    &:focus {
+        color: $color-white;
+        outline: none
+    }
+}
+
+.focus-border-search {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: .2rem;
+    background-color: $color-gold;
+    transition: .4s;
+}
+
+.search-bar:focus~.focus-border-search {
+    width: 100%;
+    transition: .4s;
+}

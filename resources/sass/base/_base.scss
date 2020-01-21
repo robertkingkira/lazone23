@@ -1,0 +1,39 @@
+/* Cand pui steluta ' * ' se aplica la tot ce este in html */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Marimea scrisului in general pe site (ca default/) */
+/* Mai defineste si cat inseamna 1rem ex: 10px = 1rem */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $nunitoSans;
+    // width: 100%;
+    position: relative;
+    padding-bottom: 7.7rem;
+    min-height: 100vh;
+}
+
+main {
+    min-height: calc(100vh - 121rem - 7.7rem);
+}
+
+p,
+ul {
+    margin-bottom: 0 !important;
+}
+
+/* Asta este folosit global sa dam spatiu oriunde intre elemente */
+.spacer {
+    margin: 4rem 0;
+}

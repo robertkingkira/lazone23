@@ -1,0 +1,40 @@
+.thankyou-container {
+    display: flex;
+    flex-direction: column;
+    // width: 60%;
+    // margin: auto;
+    height: 50rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.thankyou-title {
+    font-size: 4rem;
+    color: $color-gray7;
+    // margin: 1rem 0;
+}
+
+.thankyou-subtitle {
+    font-size: 1.8rem;
+    color: $color-gray6;
+    padding-bottom: 2rem;
+
+}
+
+.thankyou-button {
+    color: $color-white;
+    background-color: $color-blue-dark;
+    font-size: $default-font-size;
+    padding: 1rem 2.1rem;
+    border: none;
+    border-radius: 2.1rem;
+    transition: .4s ease-in-out;
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-blue-dark2;
+        transition: .4s ease-in-out;
+        text-decoration: none;
+    }
+}

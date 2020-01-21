@@ -1,0 +1,41 @@
+/* Medium Devices , Desktops */
+
+@media only screen and (max-width: 992px) {
+    header {
+        .main-navbar {
+            flex-direction: column;
+
+            .logoImg {
+                margin: auto;
+            }
+
+            ul {
+                margin: auto 0;
+                width: 80%;
+            }
+        }
+    }
+
+    .featured-section {
+        padding: 5rem 0;
+
+        .products {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .contact-container-right {
+        margin-bottom: 4rem;
+    }
+
+    .footer-main {
+        flex-direction: column;
+    }
+
+}
+
+/* Small Devices , Tablets */
+@media only screen and (max-width: 768px) {}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {}

@@ -1,0 +1,288 @@
+.container-checkout {
+    width: 80%;
+    margin: 4rem auto;
+}
+
+.checkout-heading {
+    font-size: 3.3rem;
+    color: $color-gray7;
+}
+
+.checkout-section {
+    display: flex;
+}
+
+.checkout-form-container {
+    flex: 1 1 40rem;
+    padding-right: 6rem;
+}
+
+.checkout-heading-2,
+.checkout-payment-heading {
+    font-size: 2.4rem;
+    color: $color-gray7;
+    padding-bottom: 1rem;
+}
+
+.checkout-table-container {
+    flex: 1 1 40rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 6rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.checkout-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.checkout-half-form {
+    display: flex;
+
+    .checkout-form-group {
+        flex: 1 1 10rem;
+        margin-right: 2rem;
+    }
+
+    .form-group-right {
+        flex: 1 1 10rem;
+        margin-right: 0;
+    }
+}
+
+.checkout-label {
+    font-size: 1.8rem;
+    color: $color-gray6;
+}
+
+.checkout-input {
+    font-size: $default-font-size;
+    color: $color-gray7;
+    box-sizing: border-box;
+    background-color: $color-white;
+    height: 3.5rem;
+    padding: 1rem 1.2rem;
+    border-radius: .4rem;
+    border: .1rem solid transparent;
+    box-shadow: 0 .1rem .3rem 0 $color-gray6;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+
+    &:focus {
+        box-shadow: 0 .1rem .3rem 0 $color-gray7;
+    }
+}
+
+/* Button Complete Order */
+.checkout-button {
+    font-size: 2.3rem;
+    color: $color-white;
+    border: none;
+    background: $color-blue-dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+    border-radius: 3rem;
+    transition: .4s ease-in-out;
+
+    &:hover {
+        background: $color-blue-dark2;
+        transition: .4s ease-in-out;
+    }
+
+    &:disabled {
+        background: lighten($color-blue-dark, 10%);
+        cursor: not-allowed;
+    }
+}
+
+.checkout-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-table-row {
+    display: flex;
+}
+
+.checkout-table-row-left {
+    display: flex;
+    flex: 1 1 10rem;
+}
+
+.checkout-table-row-right {
+    // flex: 1 1 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 4rem;
+    margin: auto;
+    border: .1rem solid $color-gray6;
+}
+
+.checkout-item-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 10rem;
+    margin-left: 2rem;
+    justify-content: center;
+}
+
+.checkout-table-item {
+    font-size: $default-font-size;
+    color: $color-gray7;
+    margin-bottom: .6rem;
+}
+
+.checkout-table-description {
+    font-size: $default-font-size;
+    color: $color-gray6;
+    margin-bottom: .6rem;
+}
+
+.checkout-table-price {
+    font-size: $default-font-size;
+    color: $color-green;
+}
+
+.checkout-table-img-wrap {
+    width: 12rem;
+}
+
+.checkout-table-img {
+    width: 100%;
+}
+
+
+/*  Checkout Total Price Section */
+
+.checkout-totals {
+    display: flex;
+}
+
+.checkout-total-row-left {
+    flex: 1 1 10rem;
+
+    .checkout-subtotal,
+    .checkout-discount,
+    .checkout-tax {
+        font-size: $default-font-size;
+        color: $color-gray6;
+    }
+
+    .checkout-total {
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+}
+
+
+
+.checkout-total-row-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .checkout-subtotal,
+    .checkout-discount,
+    .checkout-tax {
+        font-size: $default-font-size;
+        color: $color-gray6;
+    }
+
+    .checkout-total {
+        font-size: 2rem;
+        font-weight: 800;
+    }
+}
+
+.discount-remove-button {
+    color: $color-gray7;
+    font-size: 1.5rem;
+    border: none;
+    background: transparent;
+}
+
+.have-code-link {
+    color: $color-gray6;
+    font-size: $default-font-size;
+    font-family: $nunitoSans;
+
+    &:hover {
+        text-decoration: none;
+        color: lighten($color-gray6, 10%);
+    }
+}
+
+.promo-code-input {
+    font-size: $default-font-size;
+    color: $color-gray7;
+    box-sizing: border-box;
+    background-color: $color-white;
+    height: 4rem;
+    margin-right: 2rem;
+    padding: 1rem 1.2rem;
+    border-radius: .4rem;
+    border: .1rem solid transparent;
+    box-shadow: 0 .1rem .3rem 0 $color-gray6;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+
+    &:focus {
+        box-shadow: 0 .1rem .3rem 0 $color-gray7;
+    }
+}
+
+.button-promo-code {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: $color-blue-dark;
+    border: none;
+    border-radius: 3rem;
+    padding: 1.2rem 3rem;
+    transition: .4s ease-in-out;
+
+    &:hover {
+        background-color: darken($color-blue-dark, 10%);
+        transition: .4s ease-in-out;
+    }
+}
+
+
+/* Stripe CSS HERE */
+
+.StripeElement {
+    box-sizing: border-box;
+    background-color: $color-white;
+    height: 4rem;
+    padding: 1rem 1.2rem;
+    border-radius: .4rem;
+    border: .1rem solid transparent;
+    box-shadow: 0 .1rem .3rem 0 $color-gray6;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+    box-shadow: 0 .1rem .3rem 0 $color-gray7;
+}
+
+.StripeElement--invalid {
+    border-color: $color-red;
+}
+
+.StripeElement--webkit--autofill {
+    background-color: $color-yellow-light !important;
+}
+
+#card-errors {
+    color: $color-red;
+}

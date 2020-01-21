@@ -1,0 +1,13 @@
+/* Toate produsele au aceeasi marime  */
+.product-img-wrap {
+    width: 16rem;
+    margin: auto;
+
+}
+
+.product-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
