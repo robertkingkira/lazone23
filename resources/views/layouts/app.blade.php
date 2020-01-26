@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Web Developers"
-        content="DeCA23Designs is the place where you can get your desired website or app , and offers the support that you need.">
+        content="La Zone 23 is the place where you can get your desired website or app , and offers the support that you need.">
     <link class="logo-favicon" rel="icon" type="image/png" href="/img/diamond.svg"> <!-- END Logo Image Bara Sus -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
