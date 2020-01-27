@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/lazoneco/public_html/lazone23repo
+    - /bin/cp * $DEPLOYPATH
