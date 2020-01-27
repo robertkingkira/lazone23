@@ -50,7 +50,7 @@ return [
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'lazoneco_lazone23db'),
             'username' => env('DB_USERNAME', 'lazoneco_lazone23'),
-            'password' => env('DB_PASSWORD', 'wbNjfu;o$(jE'),
+            'password' => env('DB_PASSWORD', '[Yx]sN(x@^u%'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
