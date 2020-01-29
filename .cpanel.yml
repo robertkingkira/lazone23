@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/lazoneco/public_html/lazone23repo_origin/
-    - /bin/cp -R * $DEPLOYPATH
+    - export DEPLOYPATH=/home/lazoneco/public_html/lazone23repo_origin
+    - /bin/cp * $DEPLOYPATH
