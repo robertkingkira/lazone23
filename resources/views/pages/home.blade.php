@@ -40,7 +40,7 @@
         <div class="container-contact">
             <h1 class="text-contact">Get in touch</h1>
             <p class="description-contact">Send us an email and tell us how can we help you. <br>
-                Talk to .
+                Talk to you soon.
             </p>
         </div>
         <div class="contact-container-right">
