@@ -219,7 +219,7 @@
     <script>
         (function () {
             // Create a Stripe client.
-            var stripe = Stripe('pk_live_DRorwy5sLY0lS0PCTtjuRvj500BLM5PTB2');
+            var stripe = Stripe('pk_test_GTWFGaeZW9rkVRqqLTDqZRST00FOGzhAlr');
 
             // Create an instance of Elements.
             var elements = stripe.elements();
