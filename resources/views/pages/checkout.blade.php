@@ -219,6 +219,7 @@
     <script>
         (function () {
             // Create a Stripe client.
+            // Aici iti pui key-ul API Stri
             var stripe = Stripe('pk_test_GTWFGaeZW9rkVRqqLTDqZRST00FOGzhAlr');
 
             // Create an instance of Elements.
