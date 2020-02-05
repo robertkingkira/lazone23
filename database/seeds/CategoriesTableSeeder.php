@@ -4,7 +4,7 @@ use App\Category;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
-class CategoryTableSeeder extends Seeder
+class CategoriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
