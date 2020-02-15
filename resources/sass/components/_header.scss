@@ -15,29 +15,53 @@
 
 .nav-ul {
     display: flex;
-    flex: 1 1 40rem;
+    // flex: 1 1 40rem;
     justify-content: space-around;
     align-items: center;
     list-style: none;
 }
 
+.nav-list {
+    margin-right: 2.1rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
 .logo-wrapper {
     flex: 1 1 40rem;
+    display: flex;
 }
 
 .logo-link {
     display: flex;
     width: 18rem;
+    margin-right: 8rem;
 }
 
 .logoImg {
     width: 100%;
 }
 
+.top-nav-right {
+    flex: 1 1 40rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-ul-right {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .nav-link {
     font-family: $poppins;
     color: $color-white;
     font-size: 1.8rem;
+    display: flex !important;
 
     &:hover {
         color: $color-gold;
@@ -61,20 +85,18 @@
         font-size: 2rem;
         margin: 0 .6rem;
     }
+}
 
-    .cart-count {
-        span {
-            background: $color-yellow;
-            color: $color-gray7;
-            height: 2rem;
-            width: 2rem;
-            border-radius: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-
+.cart-count {
+    span {
+        background: $color-yellow;
+        color: $color-gray7;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 

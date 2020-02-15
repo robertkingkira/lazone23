@@ -89,33 +89,62 @@ ul {
 .nav-ul {
   display: -webkit-box;
   display: flex;
-  -webkit-box-flex: 1;
-          flex: 1 1 40rem;
   justify-content: space-around;
   -webkit-box-align: center;
           align-items: center;
   list-style: none;
 }
 
+.nav-list {
+  margin-right: 2.1rem;
+}
+
+.nav-list:last-child {
+  margin-right: 0;
+}
+
 .logo-wrapper {
   -webkit-box-flex: 1;
           flex: 1 1 40rem;
+  display: -webkit-box;
+  display: flex;
 }
 
 .logo-link {
   display: -webkit-box;
   display: flex;
   width: 18rem;
+  margin-right: 8rem;
 }
 
 .logoImg {
   width: 100%;
 }
 
+.top-nav-right {
+  -webkit-box-flex: 1;
+          flex: 1 1 40rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+}
+
+.nav-ul-right {
+  display: -webkit-box;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
 .nav-link {
   font-family: "Poppins", sans-serif;
   color: #ffffff;
   font-size: 1.8rem;
+  display: -webkit-box !important;
+  display: flex !important;
 }
 
 .nav-link:hover {
@@ -142,7 +171,7 @@ ul {
   margin: 0 0.6rem;
 }
 
-.nav-cart-link .cart-count span {
+.cart-count span {
   background: #ffcc00;
   color: #37323e;
   height: 2rem;
@@ -531,6 +560,49 @@ ul {
 
 .product-page-container-img .product-page-img {
   width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.product-page-container-img img.active {
+  opacity: 1;
+}
+
+.product-page-images-thumb {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  padding: 2rem 0;
+  width: 40rem;
+  margin: auto;
+}
+
+.images-thumb-wrapper {
+  width: 12rem;
+  height: auto;
+  display: -webkit-box;
+  display: flex;
+  margin: auto;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.selected {
+  border: 1px solid #6f6f89;
+}
+
+.images-thumb {
+  width: 100%;
+  padding: 1rem;
+  opacity: 0.8;
+}
+
+.images-thumb:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .product-page-info {
@@ -648,37 +720,6 @@ ul {
 
 .product-page-info .payment-method-cards-wrap .payment-method-cards-img {
   width: 100%;
-}
-
-.product-page-images-thumb {
-  display: -webkit-box;
-  display: flex;
-  list-style: none;
-  padding: 2rem 0;
-}
-
-.product-page-images-thumb .images-thumb-wrapper {
-  width: 30rem;
-  height: auto;
-  display: -webkit-box;
-  display: flex;
-  margin: auto;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  align-items: center;
-}
-
-.product-page-images-thumb .images-thumb {
-  width: 40%;
-  height: auto;
-  padding: 1rem;
-  opacity: 0.8;
-}
-
-.product-page-images-thumb .images-thumb:hover {
-  opacity: 1;
-  cursor: pointer;
 }
 
 .product-page-bottom-line {

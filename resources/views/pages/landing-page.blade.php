@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('pages.layout')
 
 @section('content')
 
@@ -10,7 +10,11 @@
                 @foreach ($products as $product)
                 <div class="product">
                     <a class="product-img-wrap" href="{{ route('shop.show', $product->slug) }}">
-                        <img class="product-img" src="{{ asset('img/products/'.$product->slug.'.png') }}" alt="Product"></a>
+            <!-- Metoda de a incarca img este folosita pentru Voyager Admin -->
+                        <img class="product-img" src="{{ productImage($product->image) }}" alt="Product"></a>
+
+            <!-- Metoda de a incarca img este folosita inainte de Voyager Admin -->
+                        {{-- <img class="product-img" src="{{ asset('img/products/'.$product->slug.'.png') }}" alt="Product"></a> --}}
 
                     <a class="product-link" href="{{ route('shop.show', $product->slug) }}"><span class="product-name">{{ $product->name }}</span></a>
 

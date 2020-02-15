@@ -8,13 +8,7 @@
         </div> <!-- end Footer Year -->
 
         <div class="footer-nav-container">
-            <ul class="footer-nav">
-                <li class="footer-list"><a class="footer-link" href="#terms">Terms</a></li>
-                <li class="footer-list"><a class="footer-link" href="#privacy">Privacy</a></li>
-                <li class="footer-list"><a class="footer-link" href="#support">Support</a></li>
-                <li class="footer-list"><a class="footer-link" href="#contact">Contact</a></li>
-            </ul>
-
+            {{ menu('footer', 'include.menus.footer') }}
         </div> <!-- end Footer Nav -->
 
     </footer> <!-- End FOOTER -->

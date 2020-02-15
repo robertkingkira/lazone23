@@ -11,8 +11,15 @@
 
             @foreach ($mightAlsoLike as $product)
                 <div class="might-like-product">
+                <!-- Si aici va trebui schimbata metoda de a incarca img daca nu se fac stegulete cu reduceri in Voyager Admin -->
                     <img class="might-like-img-promo" src="{{ asset('img/promo.png') }}" alt="promo">
-                    <a class="might-like-img-link" href="{{ route('shop.show', $product->slug) }}"><img class="might-like-img" src="{{ asset('img/products/'.$product->slug.'.png') }}" alt="product"></a>
+                    <a class="might-like-img-link" href="{{ route('shop.show', $product->slug) }}">
+            <!-- Metoda de a incarca img este folosita pentru Voyager Admin -->
+                        <img class="might-like-img" src="{{ productImage($product->image) }}" alt="product">
+
+            <!-- Metoda de a incarca img este folosita inainte de Voyager Admin -->
+                        {{-- <img class="might-like-img" src="{{ asset('img/products/'.$product->slug.'.png') }}" alt="product"> --}}
+                    </a>
                     <p class="might-like-title">{{ $product->name }}</p>
                     <p class="might-like-oldprice"><del>{{ $product->presentOldPrice() }}</del></p>
                     <p class="might-like-price">{{ $product->presentPrice() }}</p>

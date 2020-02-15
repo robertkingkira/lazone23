@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('pages.layout')
 
 @section('extra-css')
 <script src="https://js.stripe.com/v3/"></script>
@@ -19,8 +19,8 @@
     <div class="spacer"></div>
     <div class="alert alert-danger">
         <ul>
-            @foreach ($errors as $error)
-            <li>{{ $error }}</li>
+            @foreach ($errors->all() as $error)
+            <li>{!! $error !!}</li>
             @endforeach
         </ul>
     </div>
@@ -35,9 +35,17 @@
                 {{ csrf_field() }}
                 <h2 class="checkout-heading-2">Billing Details</h2>
                 <div class="checkout-form-group">
+                    
                     <label class="checkout-label" for="email">Email Address</label>
-                    <input class="checkout-input" type="email" class="checkout-form-control" id="email" name="email"
-                        value="{{ old('email') }}" required>
+                    @if (auth()->user())
+                        <input class="checkout-input" type="email" class="checkout-form-control" id="email" name="email"
+                    value="{{ auth()->user()->email }}" readonly>
+
+                    @else 
+                        <input class="checkout-input" type="email" class="checkout-form-control" id="email" name="email"
+                    value="{{ old('email') }}" required>
+
+                    @endif    
                 </div>
                 <div class="checkout-form-group">
                     <label class="checkout-label" for="name">Name</label>
@@ -140,8 +148,13 @@
                     <div class="checkout-table-row">
                         <div class="checkout-table-row-left">
                             <div class="checkout-table-img-wrap">
-                                <img src="{{ asset('img/products/'.$item->model->slug.'.png')}}" alt="item"
+            <!-- Metoda de a incarca img este folosita pentru Voyager Admin -->
+                                <img src="{{ productImage($item->model->image) }}" alt="item"
                                     class="checkout-table-img">
+
+            <!-- Metoda de a incarca img este folosita inainte de Voyager Admin -->
+                                {{-- <img src="{{ asset('img/products/'.$item->model->slug.'.png')}}" alt="item"
+                                    class="checkout-table-img"> --}}
                             </div>
                             <div class="checkout-item-details">
                                 <div class="checkout-table-item">{{ $item->model->name }}</div>
@@ -220,7 +233,7 @@
         (function () {
             // Create a Stripe client.
             // Aici iti pui key-ul API Stri
-            var stripe = Stripe('pk_test_GTWFGaeZW9rkVRqqLTDqZRST00FOGzhAlr');
+            var stripe = Stripe('pk_test_xbXzqTMF9HIcUPoNz4QbdhHJ00O0hhpUWw');
 
             // Create an instance of Elements.
             var elements = stripe.elements();

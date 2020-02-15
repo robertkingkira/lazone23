@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('pages.layout')
 
 @section('content')
 
@@ -6,15 +6,29 @@
 
     <div class="product-page-container-img">
         <div class="product-page-wrap-img">
-            <img id="imageProduct" class="product-page-img" src="{{ asset('img/products/'.$product->slug.'.png') }}" alt="product">
+    <!-- Metoda asta merge de a incarca img merge cu Voyager Admin Dashboard -->
+            <img id="currentImage" class="product-page-img active" src="{{ productImage($product->image) }}" alt="product">
+    <!--Metoda de jos de a incarca img mergea inainte de a adauga Voyager Admin -->
+            {{-- <img id="imageProduct" class="product-page-img" src="{{ asset('img/products/'.$product->slug.'.png') }}" alt="product"> --}}
         </div>
-        <div class="product-page-images-thumb">
-            <div class="images-thumb-wrapper">
-                <img class="images-thumb" onclick="imgThumb(this)" src="{{ asset('img/products/'.$product->slug.'.png') }}" alt="product">
-                <img class="images-thumb" onclick="imgThumb(this)" src="{{ asset('img/products/'.$product->slug.'.png') }}" alt="product">
 
-                <img class="images-thumb" onclick="imgThumb(this)" src="{{ asset('img/products/'.$product->slug.'.png') }}" alt="product">
+        <div class="product-page-images-thumb">
+            {{-- <div class="images-thumb-wrapper selected">
+                <img class="images-thumb" src="{{ asset('img/products/desktop-1.png') }}" alt="product">
+            </div>--}}
+
+            <div class="images-thumb-wrapper selected">
+                <img class="images-thumb" src="{{ productImage($product->image) }}" alt="product">
             </div>
+
+            @if ($product->images)
+                @foreach (json_decode($product->images, true) as $image)
+                <div class="images-thumb-wrapper">
+                    <img class="images-thumb" src="{{ productImage($image) }}" alt="product">
+                </div>
+                @endforeach
+            @endif
+
         </div>
     </div>
 
@@ -27,7 +41,7 @@
 
         <div class="product-wrapper-details">
             <p class="product-page-description">
-                {{ $product->description }}
+                {!! $product->description !!}
             </p>
         </div>
         <p>&nbsp;</p>
@@ -158,4 +172,31 @@
     </div>
 </div>
 <!-- END Footer Product -->
+@endsection
+
+
+@section('extra-js')
+    
+    <script>
+        (function(){
+            const currentImage = document.querySelector('#currentImage');
+            const images = document.querySelectorAll('.images-thumb-wrapper');
+
+            images.forEach((element) => element.addEventListener('click', thumbnailClick));
+
+            function thumbnailClick(e) {
+
+                currentImage.classList.remove('active');
+
+                currentImage.addEventListener('transitionend', () => {
+                    currentImage.src = this.querySelector('img').src;
+                    currentImage.classList.add('active');
+                })
+
+                images.forEach((element) => element.classList.remove('selected'));
+                this.classList.add('selected');
+            }
+
+        })();
+    </script>
 @endsection

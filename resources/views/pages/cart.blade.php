@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('pages.layout')
 @section('content')
 
 <section class="cart-page">
@@ -40,9 +40,13 @@
             <div class="cart-page-item-main cart-f">
                 <div class="cart-page-item-block ib-info cart-f">
                     <div class="cart-product-img-wrap">
-                        <a class="product-img-wrap" href="{{ route('shop.show', $item->model->slug) }}"><img
-                                class="cart-product-img"
-                                src="{{ asset('img/products/'.$item->model->slug.'.png') }}"></a>
+                        <a class="product-img-wrap" href="{{ route('shop.show', $item->model->slug) }}">
+            <!-- Metoda de a incarca img este folosita pentru de Voyager Admin -->
+                            <img class="cart-product-img" src="{{ productImage($item->model->image) }}">
+
+            <!-- Metoda de a incarca img este folosita inainte de Voyager Admin -->
+                            {{-- <img class="cart-product-img" src="{{ asset('img/products/'.$item->model->slug.'.png') }}"> --}}
+                        </a>
                     </div>
                     <div class="cart-ib-info-meta">
                         <a class="cart-product-title-link" href="{{ route('shop.show', $item->model->slug) }}">
@@ -152,12 +156,16 @@
 
         @foreach (Cart::instance('saveForLater')->content() as $item)
 
-
         <div class="cart-page-item-main cart-f">
             <div class="cart-page-item-block ib-info cart-f">
                 <div class="cart-product-img-wrap">
-                    <a href="{{ route('shop.show', $item->model->slug) }}"><img class="cart-product-img"
-                            src="{{ asset('img/products/'.$item->model->slug.'.png') }}"></a>
+                    <a href="{{ route('shop.show', $item->model->slug) }}">
+            <!-- Metoda de a incarca img este folosita pentru Voyager Admin -->
+                        <img class="cart-product-img" src="{{ productImage($item->model->image) }}">
+
+            <!-- Metoda de a incarca img este folosita inainte de Voyager Admin -->
+                        {{-- <img class="cart-product-img" src="{{ asset('img/products/'.$item->model->slug.'.png') }}"> --}}
+                    </a>
                 </div>
                 <div class="cart-ib-info-meta">
                     <a class="cart-product-title-link" href="{{ route('shop.show', $item->model->slug) }}">

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('pages.layout')
 
 @section('content')
 <section id="products" class="featured-section">
@@ -50,8 +50,13 @@
                 <!-- Asa le adaugi in pagina direct din baza de date -->
                 @forelse ($products as $product)
                 <div class="product">
-                    <a class="product-img-wrap" href="{{ route('shop.show', $product->slug) }}"><img class="product-img"
-                            src="{{ asset('img/products/'.$product->slug.'.png') }}" alt="Product"></a>
+                    <a class="product-img-wrap" href="{{ route('shop.show', $product->slug) }}">
+            <!-- Metoda de a incarca img este folosita pentru Voyager Admin -->
+                        <img class="product-img" src="{{ productImage($product->image) }}" alt="Product">
+
+            <!-- Metoda de a incarca img este folosita inainte de Voyager Admin -->
+                        {{-- <img class="product-img" src="{{ asset('img/products/'.$product->slug.'.png') }}" alt="Product"> --}}
+                    </a>
                     <a class="product-link" href="{{ route('shop.show', $product->slug) }}"><span
                             class="product-name">{{ $product->name }}</span></a>
                     <p class="product-description">{{ $product->details }}</p>

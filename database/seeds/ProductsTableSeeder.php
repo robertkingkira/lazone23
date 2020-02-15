@@ -17,12 +17,14 @@ class ProductsTableSeeder extends Seeder
         //Laptops
         for ($i = 1; $i < 20; $i++) {
             Product::create([
-                'name' => 'Laptop' . $i,
-                'slug' => 'laptop-' . $i,
+                'name' => 'Laptop '.$i,
+                'slug' => 'laptop-'.$i,
                 'details' => [13, 14, 15][array_rand([13, 14, 15])] . ' inch, ' . [1, 2, 3][array_rand([1, 2, 3])] . 'TB SSD, 32GB RAM',
                 'price' => rand(129999, 249999),
                 'oldprice' => rand(209999, 309999),
                 'description' => 'Lorem' . $i . ' ipsum dolor sit amet, consecterut adipsicing elit. Ipsum temporis iusto ipsa, asperiores voluptar unde aspertanur praesentionu in? Alisquam , dolores!',
+                'image' => 'products/images/laptop-'.$i.'.png',
+                'images' => '["products\/images\/laptop-2.png", "products\/images\/laptop-3.png", "products\/images\/laptop-4.png"]',
             ])->categories()->attach(1);
         }
 
@@ -38,6 +40,8 @@ class ProductsTableSeeder extends Seeder
                 'price' => rand(229999, 349999),
                 'oldprice' => rand(309999, 409999),
                 'description' => 'Lorem' . $i . ' ipsum dolor sit amet, consecterut adipsicing elit. Ipsum temporis iusto ipsa, asperiores voluptar unde aspertanur praesentionu in? Alisquam , dolores!',
+                'image' => 'products/images/desktop-'.$i.'.png',
+                'images' => '["products\/images\/desktop-2.png", "products\/images\/desktop-3.png", "products\/images\/desktop-4.png"]',
             ])->categories()->attach(2);
         }
 
@@ -50,6 +54,8 @@ class ProductsTableSeeder extends Seeder
                 'price' => rand(229999, 349999),
                 'oldprice' => rand(309999, 409999),
                 'description' => 'Lorem' . $i . ' ipsum dolor sit amet, consecterut adipsicing elit. Ipsum temporis iusto ipsa, asperiores voluptar unde aspertanur praesentionu in? Alisquam , dolores!',
+                'image' => 'products/images/camera-'.$i.'.png',
+                'images' => '["products\/images\/camera-2.png", "products\/images\/camera-3.png", "products\/images\/camera-4.png"]',
             ])->categories()->attach(3);
         }
         //Cereals
@@ -61,6 +67,8 @@ class ProductsTableSeeder extends Seeder
                 'price' => rand(229999, 349999),
                 'oldprice' => rand(309999, 409999),
                 'description' => 'Lorem' . $i . ' ipsum dolor sit amet, consecterut adipsicing elit. Ipsum temporis iusto ipsa, asperiores voluptar unde aspertanur praesentionu in? Alisquam , dolores!',
+                'image' => 'products/images/cereals-'.$i.'.png',
+                'images' => '["products\/images\/cereals-2.png", "products\/images\/cereals-3.png", "products\/images\/cereals-4.png"]',
             ])->categories()->attach(4);
         }
         // Select random entries to be featured
