@@ -1,0 +1,113 @@
+.auth-pages {
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+
+
+    input {
+        border: 1px solid $color-gray5;
+        padding: 16px 10px;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    input[type="checkbox"] {
+        width: auto;
+    }
+    
+    .login-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        label {
+            font-size: 15px;
+        }
+        input {
+            color: $color-gray7;
+        }
+    }
+
+    .auth-button {
+        background: $black-pearl;
+        color: $color-white;
+        font-size: $default-font-size;
+        border-radius: 5px;
+        padding: 12px 50px;
+        border: none;
+        transition: .3s ease-in;
+
+        &:hover {
+            background: lighten($black-pearl, 10%);
+            filter: drop-shadow(.2rem .2rem .3rem $color-blue-dark2);
+            transition: .3s ease-out;
+        }
+    }
+
+    .forgot-password-link {
+        font-size: $default-font-size;
+        color: $color-gray7;
+         
+        &:hover {
+            text-decoration: none;
+            color: lighten($color-gray7, 10%);
+        }
+    }
+
+    .auth-button-hollow {
+        background: $color-white;
+        color: $black-pearl;
+        border-radius: 5px;
+        border: 1px solid $black-pearl;
+        padding: 12px 50px;
+        font-size: $default-font-size;
+
+        &:hover {
+            background: $black-pearl;
+            color: $color-white;
+            text-decoration: none;
+        }
+    }
+
+    .auth-right {
+        border-left: 1px solid $color-gray5;
+        padding-left: 100px;
+    }
+}
+
+.already-have-container {
+    display: flex;
+    flex-direction: column;
+
+    p {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+}
+
+.create-account-button {
+    margin-top: 3rem;
+}
+
+.login-button {
+    background: $black-pearl;
+    color: $color-white;
+    font-size: $default-font-size;
+    border-radius: 5px;
+    // margin-top: 2rem;
+    padding: 12px 50px;
+    border: none;
+    transition: .3s ease-in;
+    text-align: center;
+
+    &:hover {
+        color: $color-white;
+        background: lighten($black-pearl, 10%);
+        filter: drop-shadow(.2rem .2rem .3rem $color-blue-dark2);
+        transition: .3s ease-out;
+        text-decoration: none;
+    }
+}

@@ -31,6 +31,8 @@ main {
 p,
 ul {
     margin-bottom: 0 !important;
+    list-style: none !important;
+    font-size: $default-font-size;
 }
 
 /* Asta este folosit global sa dam spatiu oriunde intre elemente */

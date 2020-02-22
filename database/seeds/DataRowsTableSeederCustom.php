@@ -93,8 +93,24 @@ class DataRowsTableSeederCustom extends Seeder
                 'edit'         => 1,
                 'add'          => 1,
                 'delete'       => 1,
-                'details'      => '{"validation":{"rule":"required|regex:/^\\\d*(\\\.\\\d{1,2})?$/"}}',
+                'details'      => '{"validation":{"rule":"required|regex:/^\\d*(\\.\\d{1,2})?$/"}}',
                 'order'        => 5,
+            ])->save();
+        }
+
+        $dataRow = $this->dataRow($productDataType, 'oldprice');
+        if (!$dataRow->exists) {
+            $dataRow->fill([
+                'type'         => 'number',
+                'display_name' => 'oldprice',
+                'required'     => 1,
+                'browse'       => 1,
+                'read'         => 1,
+                'edit'         => 1,
+                'add'          => 1,
+                'delete'       => 1,
+                'details'      => '{"validation":{"rule":"required|regex:/^\\d*(\\.\\d{1,2})?$/"}}',
+                'order'        => 6,
             ])->save();
         }
 
@@ -110,7 +126,7 @@ class DataRowsTableSeederCustom extends Seeder
                 'add'          => 1,
                 'delete'       => 1,
                 'details'       => '',
-                'order'        => 6,
+                'order'        => 7,
             ])->save();
         }
 
@@ -126,7 +142,7 @@ class DataRowsTableSeederCustom extends Seeder
                 'add'          => 1,
                 'delete'       => 1,
                 'details'       => '{"on":"Yes","off":"No"}',
-                'order'        => 7,
+                'order'        => 8,
             ])->save();
         }
 
@@ -142,7 +158,7 @@ class DataRowsTableSeederCustom extends Seeder
                 'add'          => 1,
                 'delete'       => 1,
                 'details'      => '{"quality":"70%","thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}',
-                'order'        => 8,
+                'order'        => 9,
             ])->save();
         }
 
@@ -158,7 +174,7 @@ class DataRowsTableSeederCustom extends Seeder
                 'add'          => 1,
                 'delete'       => 1,
                 'details'      => '',
-                'order'        => 9,
+                'order'        => 10,
             ])->save();
         }
 
@@ -174,7 +190,7 @@ class DataRowsTableSeederCustom extends Seeder
                 'add'          => 1,
                 'delete'       => 0,
                 'details'      => '',
-                'order'        => 10,
+                'order'        => 11,
             ])->save();
         }
 
@@ -190,11 +206,11 @@ class DataRowsTableSeederCustom extends Seeder
                 'add'          => 1,
                 'delete'       => 1,
                 'details'       => '',
-                'order'        => 11,
+                'order'        => 12,
             ])->save();
         }
 
-        $dataRow = $this->dataRow($productDataType, 'quantity');
+       /*  $dataRow = $this->dataRow($productDataType, 'quantity');
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'number',
@@ -208,7 +224,7 @@ class DataRowsTableSeederCustom extends Seeder
                 'details'       => '',
                 'order'        => 8,
             ])->save();
-        }
+        } */
 
     /*
     |---------------------------------------------------------------------

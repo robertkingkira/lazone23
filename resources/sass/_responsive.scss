@@ -32,6 +32,18 @@
         flex-direction: column;
     }
 
+
+    .auth-pages {
+        margin: 50px auto;
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+
+        .auth-right {
+            border-left: none;
+            padding-left: 20px;
+        }
+    }
+
 }
 
 /* Small Devices , Tablets */

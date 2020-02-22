@@ -41,8 +41,7 @@ Route::get('/thankyou', 'ConfirmationController@index')->name('confirmation.inde
 
 
 
-
-
+/* VOYAGER ADMIN */
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
@@ -51,8 +50,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/mailable', function () {
+
+/* Search */
+Route::get('/search', 'ShopController@search')->name('search');
+
+Route::get('/search-algolia', 'ShopController@searchAlgolia')->name('search-algolia');
+
+
+/* EMAIL */
+/* Route::get('/mailable', function () {
     $order = App\Order::find(1);
-    
+
     return new App\Mail\OrderPlaced($order);
-});
+}); */

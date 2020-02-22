@@ -1,0 +1,75 @@
+/* Search-Results page */
+
+.search-container {
+    width: 90%;
+    margin: auto;
+    padding-top: 6rem;
+}
+
+.container-search-nav {
+    margin-left: 8rem;
+    width: 22rem;
+}
+.search-form{
+    display: flex;
+}
+.search-icon {
+    margin: auto 1rem;
+    font-size: 1.7rem;
+
+    &:hover {
+        color: $color-gold;
+        cursor: pointer;
+    }
+}
+.search-box {
+    width: 22rem;
+    padding: 1rem 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: .1rem solid $color-gold;
+    color: $color-gray5;
+    font-size: $default-font-size;
+    transition: border-color .3s;
+    outline: none;
+
+    &::placeholder {
+        color: $color-gray5;
+    }
+
+    &:focus {
+        // border-bottom-color: $color-aqua;
+        outline: none;
+    }
+}
+
+
+// Container Error Message 
+.container-alert-product {
+    width: 90%;
+    margin: auto;
+    padding-top: 3rem;
+    font-size: $default-font-size;
+}
+
+.search-results-heading {
+    color: $color-gray7;
+}
+
+.search-results-info {
+    color: $color-gray7;
+    padding-bottom: 1rem;
+}
+
+.products-result-container {
+    font-size: $default-font-size;
+}
+
+.table-product-link-th {
+    color: $color-gray7;
+    &:hover {
+        color: lighten($color-gray7, 30%);
+        text-decoration: none;
+        transition: color .3s;
+    }
+}

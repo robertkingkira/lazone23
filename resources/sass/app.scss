@@ -10,6 +10,10 @@
 @import 'components/header';
 @import 'components/footer';
 @import 'components/pagination';
+@import 'components/search-results-algolia';
+@import 'components/search';
+@import 'components/tablesSearch';
+
 
 @import 'layout/shop';
 @import 'layout/productPage';
@@ -18,7 +22,7 @@
 @import 'layout/checkout';
 @import 'layout/contact';
 @import 'layout/thankyou';
-
+@import 'layout/auth';
 
 @import 'responsive';
 

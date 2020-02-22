@@ -1,0 +1,13 @@
+.search-results-container-main {
+    width: 80%;
+    margin: auto;
+}
+
+.search-results-container-algolia {
+    min-height: 400px;
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-gap: 40px;
+
+}
