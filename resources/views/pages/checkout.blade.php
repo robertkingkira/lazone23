@@ -168,6 +168,8 @@
                         </div>
                     </div> <!-- end Checkout Table Row -->
 
+                    <hr>
+
                 @endforeach
 
                 <hr>
@@ -177,11 +179,6 @@
                         <div class="checkout-subtotal">Subtotal</div>
                         @if (session()->has('coupon'))
                             <div class="checkout-discount">Discount({{ session()->get('coupon')['name'] }}) : 
-                                <form action="{{ route('coupon.destroy') }}" method="POST" style="display: inline">
-                                    {{ csrf_field() }}
-                                    {{ method_field('delete') }}
-                                    <button class="discount-remove-button" type="submit">Remove</button>
-                                </form>
                                 <br>
                                 <hr>
                                 New Subtotal <br>
@@ -206,18 +203,10 @@
                     </div>
                 </div> <!-- end Checkout Totals -->
 
+        <!--Aici a fost inainte Have a Code ? Form -> acum este in Cart page -->
+
                 <hr> 
 
-                @if (! session()->has('coupon'))
-                    <a href="#" class="have-code-link">Have a Code ?</a>
-
-                    <form class="promo-code-form" action="{{ route('coupon.store') }}" method="POST">
-                    {{ csrf_field() }}
-                        <input class="promo-code-input" type="text" name="coupon_code" id="coupon_code">
-                        <button type="submit" class="button-promo-code">Apply</button>
-                    </form>
-
-                @endif
             </div>
 
         </div> <!-- end Checkout Section -->

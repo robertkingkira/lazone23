@@ -76,12 +76,8 @@
                     <select class="quantity" data-id="{{ $item->rowId }}">
                         @for ($i = 1; $i < 5 + 1 ; $i++) <option {{ $item->qty == $i ? 'selected' : '' }}>{{ $i }}
                             </option>
-                            @endfor
-                            {{-- <option {{ $item->qty == 1 ? 'selected' : '' }}>1</option>
-                            <option {{ $item->qty == 2 ? 'selected' : '' }}>2</option>
-                            <option {{ $item->qty == 3 ? 'selected' : '' }}>3</option>
-                            <option {{ $item->qty == 4 ? 'selected' : '' }}>4</option>
-                            <option {{ $item->qty == 5 ? 'selected' : '' }}>5</option> --}}
+                        @endfor
+                            
                     </select>
                     {{-- <input type="text" value="3" class="cart-qty" /> --}}
                     {{--  <span class="cart-table-price"><span class="price-x">x</span>  </span> --}}
@@ -104,6 +100,19 @@
         @endforeach
         <!-- end simple product -->
     </div>
+
+    @if (! session()->has('coupon'))
+        <a href="#" class="have-code-link">Have a Code ?</a>
+        <div class="have-code-container"> 
+            <form class="promo-code-form" action="{{ route('coupon.store') }}" method="POST">
+            {{ csrf_field() }}
+                <input class="promo-code-input" type="text" name="coupon_code" id="coupon_code">
+                <button type="submit" class="button-promo-code">Apply</button>
+            </form>
+        </div>
+    @endif
+
+
     <div class="cart-page-sub-table cart-f">
         <div class="cart-page-summary-block">
             <div class="cart-page-sb-promo">
@@ -118,13 +127,37 @@
             <div class="cart-page-subtotal-wrap">
                 <ul class="cart-page-subtotal-ul">
                     <li class="cart-page-subtotal"><span class="cart-page-sb-label">Subtotal</span></li>
+                    <li class="cart-page-subtotal"><span class="cart-page-sb-label">
+                        @if (session()->has('coupon'))
+                            <div class="checkout-discount">Discount({{ session()->get('coupon')['name'] }})  
+                                <form action="{{ route('coupon.destroy') }}" method="POST" style="display: inline">
+                                    {{ csrf_field() }}
+                                    {{ method_field('delete') }} <br>
+                                    <button class="discount-remove-button" type="submit">Remove</button>
+                                </form>
+                                <br>
+                                <hr>
+                                New Subtotal <br>
+                            </div>
+                        @endif    
+                    </span></li>
+    
                     <li class="cart-page-shipping"><span class="cart-page-sb-label">Tax(19%)</span></li>
-                    <li class="cart-page-grand-total"><span class="cart-page-sb-label">Total</span></li>
+                    <li class="cart-page-grand-total"><span class="cart-page-sb-label"><strong>Total</strong></span></li>
                 </ul>
                 <ul class="cart-page-subtotal-ul2">
                     <li><span class="cart-page-sb-price">{{ presentPrice(Cart::subtotal()) }}</span></li>
-                    <li><span class="cart-page-sb-value">{{ presentPrice(Cart::tax()) }}</span></li>
-                    <li><span class="cart-page-sb-price-total">{{ presentPrice(Cart::total()) }}</span></li>
+                    <li><span class="cart-page-sb-price">
+                        @if (session()->has('coupon'))
+                            <div class="checkout-discount">
+                                -{{ presentPrice($discount) }} <br><br>
+                                <hr>
+                                {{ presentPrice($newSubtotal) }} <br>
+                            </div>
+                        @endif
+                    </span></li>
+                    <li><span class="cart-page-sb-value">{{ presentPrice($newTax) }}</span></li>
+                    <li><span class="cart-page-sb-price-total"><strong>{{ presentPrice($newTotal) }}</strong></span></li>
                 </ul>
             </div> <!-- end Cart SubTotal -->
         </div>

@@ -1205,6 +1205,9 @@ ul {
 
 .cart-page-summary-block {
   display: flex;
+  background: #ececec;
+  padding: 10px;
+  border-radius: 2rem;
 }
 
 .cart-page-summary-block .cart-page-sb-promo {
@@ -1239,11 +1242,13 @@ ul {
   flex: 1 1 10rem;
   display: flex;
   flex-direction: column;
-  margin-right: 3rem;
+  margin-right: 6rem;
+  text-align: right;
 }
 
 .cart-page-summary-block .cart-page-subtotal-wrap .cart-page-subtotal-ul .cart-page-subtotal {
   display: flex;
+  justify-content: flex-end;
 }
 
 .cart-page-summary-block .cart-page-subtotal-wrap .cart-page-subtotal-ul .cart-page-subtotal .cart-page-sb-label {
@@ -1258,6 +1263,7 @@ ul {
 
 .cart-page-summary-block .cart-page-subtotal-wrap .cart-page-subtotal-ul .cart-page-shipping {
   display: flex;
+  justify-content: flex-end;
 }
 
 .cart-page-summary-block .cart-page-subtotal-wrap .cart-page-subtotal-ul .cart-page-shipping .cart-page-sb-label {
@@ -1272,6 +1278,7 @@ ul {
 
 .cart-page-summary-block .cart-page-subtotal-wrap .cart-page-subtotal-ul .cart-page-grand-total {
   display: flex;
+  justify-content: flex-end;
 }
 
 .cart-page-summary-block .cart-page-subtotal-wrap .cart-page-subtotal-ul .cart-page-grand-total .cart-page-sb-label {
@@ -1287,6 +1294,7 @@ ul {
 .cart-page-summary-block .cart-page-subtotal-wrap .cart-page-subtotal-ul2 {
   list-style: none;
   flex: 1 1 10rem;
+  text-align: right;
 }
 
 .cart-page-summary-block .cart-page-subtotal-wrap .cart-page-subtotal-ul2 .cart-page-sb-price {
@@ -1302,6 +1310,14 @@ ul {
 .cart-page-summary-block .cart-page-subtotal-wrap .cart-page-subtotal-ul2 .cart-page-sb-price-total {
   font-size: 1.6rem;
   color: #37323e;
+}
+
+.discount-remove-button {
+  color: #37323e;
+  font-size: 1.5rem;
+  border: none;
+  padding: 1px 3px;
+  background: #ffffff;
 }
 
 .cart-page-copy-block {
@@ -1352,6 +1368,68 @@ ul {
   color: #acc0fe;
   background: #191d32;
   transition: all 0.3s;
+}
+
+.have-code-link {
+  display: block;
+  color: #6d6a75;
+  font-size: 1.6rem;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: right;
+  margin: 14px 0;
+}
+
+.have-code-link:hover {
+  text-decoration: none;
+  color: #86838f;
+}
+
+.have-code-container {
+  width: 50%;
+  margin-left: auto;
+  padding-bottom: 20px;
+}
+
+.have-code-container .promo-code-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.have-code-container input[type=text] {
+  width: 70%;
+  padding: 1rem 1.2rem;
+  font-size: 1.6rem;
+}
+
+.have-code-container .promo-code-input {
+  color: #37323e;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  margin-right: 2rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid transparent;
+  box-shadow: 0 0.1rem 0.3rem 0 #6d6a75;
+  transition: box-shadow 150ms ease;
+}
+
+.have-code-container .promo-code-input:focus {
+  box-shadow: 0 0.1rem 0.3rem 0 #37323e;
+}
+
+.have-code-container .button-promo-code {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #2f3e68;
+  border: none;
+  border-radius: 3rem;
+  padding: 1.2rem 3rem;
+  transition: 0.4s ease-in-out;
+}
+
+.have-code-container .button-promo-code:hover {
+  background-color: #1f2945;
+  transition: 0.4s ease-in-out;
 }
 
 .cart-page-continue-shopping {
@@ -1590,58 +1668,6 @@ ul {
 .checkout-total-row-right .checkout-total {
   font-size: 2rem;
   font-weight: 800;
-}
-
-.discount-remove-button {
-  color: #37323e;
-  font-size: 1.5rem;
-  border: none;
-  background: transparent;
-}
-
-.have-code-link {
-  color: #6d6a75;
-  font-size: 1.6rem;
-  font-family: "Nunito Sans", sans-serif;
-}
-
-.have-code-link:hover {
-  text-decoration: none;
-  color: #86838f;
-}
-
-.promo-code-input {
-  font-size: 1.6rem;
-  color: #37323e;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  height: 4rem;
-  margin-right: 2rem;
-  padding: 1rem 1.2rem;
-  border-radius: 0.4rem;
-  border: 0.1rem solid transparent;
-  box-shadow: 0 0.1rem 0.3rem 0 #6d6a75;
-  transition: box-shadow 150ms ease;
-}
-
-.promo-code-input:focus {
-  box-shadow: 0 0.1rem 0.3rem 0 #37323e;
-}
-
-.button-promo-code {
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #2f3e68;
-  border: none;
-  border-radius: 3rem;
-  padding: 1.2rem 3rem;
-  transition: 0.4s ease-in-out;
-}
-
-.button-promo-code:hover {
-  background-color: #1f2945;
-  transition: 0.4s ease-in-out;
 }
 
 /* Stripe CSS HERE */
